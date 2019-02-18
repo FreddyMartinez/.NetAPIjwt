@@ -1,0 +1,9 @@
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\bin\Debug\ProyectoPOS.BLL.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\bin\Debug\ProyectoPOS.BLL.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\bin\Debug\SistemaPOS.DAL.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\bin\Debug\SistemaPOS.Dto.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\bin\Debug\SistemaPOS.DAL.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\bin\Debug\SistemaPOS.Dto.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.csprojResolveAssemblyReference.cache
