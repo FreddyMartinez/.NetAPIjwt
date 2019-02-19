@@ -76,9 +76,9 @@ namespace SistemaPOS.DAL.Repositorio
 
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.WriteLine("Exception: " + ex.Message);
+                    throw;
                 }
             }
             return "funciona";
