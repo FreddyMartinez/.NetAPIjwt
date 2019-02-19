@@ -59,7 +59,7 @@ namespace SistemaPOS.Servicios.Controllers
         /// <returns>Lista de menú</returns>
         /// Autor:          fmartinez
         /// Fecha Creación: 16-02-2019
-        [HttpPost]
+        [HttpGet]
         [Route("consultarMenu")]
         [ResponseType(typeof(Mensaje))]
         public IHttpActionResult ConsultarCentroDistribucion()

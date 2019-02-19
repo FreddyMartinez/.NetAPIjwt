@@ -9,7 +9,7 @@
 
         #region Mensajes Servicios
         public const string FALLO_CONSULTA = "Fallo en consulta";
-        public const string FALLO_CONSULTA_MENU = "Fallo en consulta";
+        public const string FALLO_CONSULTA_MENU = "Fallo en consulta: ";
         #endregion
 
     }

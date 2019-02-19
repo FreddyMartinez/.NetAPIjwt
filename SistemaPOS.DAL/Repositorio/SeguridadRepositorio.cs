@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaPOS.Dto.Utilidades;
 
 namespace SistemaPOS.DAL.Repositorio
 {
@@ -12,67 +13,73 @@ namespace SistemaPOS.DAL.Repositorio
     {
         public string ConsultarMenu()
         {
-            string connectionString = "Data Source=(local);Initial Catalog=Northwind;Integrated Security=SSPI";
-            string conn2 = "Data Source=MSSQL1;Initial Catalog=AdventureWorks;Integrated Security=true;";
-            try
+            using (SqlConnection conn = new SqlConnection(Util.ObtenerCadenaConexion("POS_DB")))
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
+                    //set stored procedure name && SqlCommand object
+                    string spName = @"[pos].[prcSegMenu]";
+                    SqlCommand cmd = new SqlCommand(spName, conn);
 
-                    ////set stored procedure name
-                    //string spName = @"dbo.[uspEmployeeInfo]";
+                    //SqlParameters
+                    SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
+                     transaccion.Value = 1;
+                    SqlParameter idmenu = new SqlParameter("@p_id_menu", SqlDbType.VarChar);
+                    idmenu.Value = 1;
+                    SqlParameter tag = new SqlParameter("@p_tag", SqlDbType.VarChar);
+                    tag.Value = 1;
+                    SqlParameter nombre = new SqlParameter("@p_nombre", SqlDbType.VarChar);
+                    nombre.Value = 1;
+                    SqlParameter descripcion = new SqlParameter("@p_descripcion", SqlDbType.VarChar);
+                    descripcion.Value = 1;
+                    SqlParameter rutaicono = new SqlParameter("@p_ruta_icono", SqlDbType.VarChar);
+                    rutaicono.Value = 1;
+                    SqlParameter activo = new SqlParameter("@p_activo", SqlDbType.VarChar);
+                    activo.Value = 1;
+                    SqlParameter usuario = new SqlParameter("@p_usuario", SqlDbType.VarChar);
+                    usuario.Value = 1;
 
-                    ////define the SqlCommand object
-                    //SqlCommand cmd = new SqlCommand(spName, conn);
+                    //add the parameters to the SqlCommand object
+                    cmd.Parameters.Add(transaccion);
+                    cmd.Parameters.Add(idmenu);
+                    cmd.Parameters.Add(tag);
+                    cmd.Parameters.Add(nombre);
+                    cmd.Parameters.Add(descripcion);
+                    cmd.Parameters.Add(rutaicono);
+                    cmd.Parameters.Add(activo);
+                    cmd.Parameters.Add(usuario);
 
-                    ////Set SqlParameter - the employee id parameter value will be set from the command line
-                    //SqlParameter param1 = new SqlParameter();
-                    //param1.ParameterName = "@employeeID";
-                    //param1.SqlDbType = SqlDbType.Int;
-                    //param1.Value = int.Parse(args[0].ToString());
+                    //open connection
+                    conn.Open();
 
-                    ////add the parameter to the SqlCommand object
-                    //cmd.Parameters.Add(param1);
+                    //set the SqlCommand type to stored procedure and execute
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader dr = cmd.ExecuteReader();
 
-                    ////open connection
-                    //conn.Open();
+                    Console.WriteLine(Environment.NewLine + "Retrieving data from database..." + Environment.NewLine);
+                    Console.WriteLine("Retrieved records:");
 
-                    ////set the SqlCommand type to stored procedure and execute
-                    //cmd.CommandType = CommandType.StoredProcedure;
-                    //SqlDataReader dr = cmd.ExecuteReader();
+                    //check if there are records
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            var empID = dr.GetInt32(0);
+                        }
+                    }
 
-                    //Console.WriteLine(Environment.NewLine + "Retrieving data from database..." + Environment.NewLine);
-                    //Console.WriteLine("Retrieved records:");
+                    //close data reader
+                    dr.Close();
 
-                    ////check if there are records
-                    //if (dr.HasRows)
-                    //{
-                    //    while (dr.Read())
-                    //    {
-                    //        empID = dr.GetInt32(0);
-                    //        empCode = dr.GetString(1);
-                    //        empFirstName = dr.GetString(2);
-                    //        empLastName = dr.GetString(3);
-                    //        locationCode = dr.GetString(4);
-                    //        locationDescr = dr.GetString(5);
+                    //close connection
+                    conn.Close();
 
-                    //        //display retrieved record
-                    //        Console.WriteLine("{0},{1},{2},{3},{4},{5}", empID.ToString(), empCode, empFirstName, empLastName, locationCode, locationDescr);
-                    //    }
-                    //}
-
-                    ////close data reader
-                    //dr.Close();
-
-                    ////close connection
-                    //conn.Close();
 
                 }
-            }
-            catch (Exception ex)
-            {
-                //display error message
-                Console.WriteLine("Exception: " + ex.Message);
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception: " + ex.Message);
+                }
             }
             return "funciona";
         }
