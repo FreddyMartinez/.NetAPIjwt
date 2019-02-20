@@ -11,7 +11,7 @@ namespace SistemaPOS.DAL.Repositorio
 {
     public class SeguridadRepositorio
     {
-        public string ConsultarMenu()
+        public DataTable ConsultarMenu()
         {
             using (SqlConnection conn = new SqlConnection(Util.ObtenerCadenaConexion("POS_DB")))
             {
@@ -23,21 +23,21 @@ namespace SistemaPOS.DAL.Repositorio
 
                     //SqlParameters
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
-                     transaccion.Value = 1;
-                    SqlParameter idmenu = new SqlParameter("@p_id_menu", SqlDbType.VarChar);
-                    idmenu.Value = 1;
+                     transaccion.Value = "C";
+                    SqlParameter idmenu = new SqlParameter("@p_id_menu", SqlDbType.Int);
+                    idmenu.Value = -1;
                     SqlParameter tag = new SqlParameter("@p_tag", SqlDbType.VarChar);
-                    tag.Value = 1;
+                    tag.Value = "";
                     SqlParameter nombre = new SqlParameter("@p_nombre", SqlDbType.VarChar);
-                    nombre.Value = 1;
+                    nombre.Value = "";
                     SqlParameter descripcion = new SqlParameter("@p_descripcion", SqlDbType.VarChar);
-                    descripcion.Value = 1;
+                    descripcion.Value = "";
                     SqlParameter rutaicono = new SqlParameter("@p_ruta_icono", SqlDbType.VarChar);
-                    rutaicono.Value = 1;
-                    SqlParameter activo = new SqlParameter("@p_activo", SqlDbType.VarChar);
+                    rutaicono.Value = "";
+                    SqlParameter activo = new SqlParameter("@p_activo", SqlDbType.Int);
                     activo.Value = 1;
                     SqlParameter usuario = new SqlParameter("@p_usuario", SqlDbType.VarChar);
-                    usuario.Value = 1;
+                    usuario.Value = "POS";
 
                     //add the parameters to the SqlCommand object
                     cmd.Parameters.Add(transaccion);
@@ -49,39 +49,25 @@ namespace SistemaPOS.DAL.Repositorio
                     cmd.Parameters.Add(activo);
                     cmd.Parameters.Add(usuario);
 
-                    //open connection
+                    DataTable tblMenu = new DataTable();
+
                     conn.Open();
-
-                    //set the SqlCommand type to stored procedure and execute
+                    
                     cmd.CommandType = CommandType.StoredProcedure;
-                    SqlDataReader dr = cmd.ExecuteReader();
-
-                    Console.WriteLine(Environment.NewLine + "Retrieving data from database..." + Environment.NewLine);
-                    Console.WriteLine("Retrieved records:");
-
-                    //check if there are records
-                    if (dr.HasRows)
-                    {
-                        while (dr.Read())
-                        {
-                            var empID = dr.GetInt32(0);
-                        }
-                    }
-
-                    //close data reader
-                    dr.Close();
-
-                    //close connection
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.ReturnProviderSpecificTypes = true;
+                    da.Fill(tblMenu);
+                    da.Dispose();
+                    
                     conn.Close();
 
-
+                    return tblMenu;
                 }
                 catch (Exception)
                 {
                     throw;
                 }
             }
-            return "funciona";
         }
     }
 }

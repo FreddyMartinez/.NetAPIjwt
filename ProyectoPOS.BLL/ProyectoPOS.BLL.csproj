@@ -48,6 +48,10 @@
       <Project>{b56a662d-46ff-4be1-bf35-7305cb11ff95}</Project>
       <Name>SistemaPOS.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SistemaPOS.Dto\SistemaPOS.Dto.csproj">
+      <Project>{ab21d412-d92c-4fc0-b9de-be23a29f8167}</Project>
+      <Name>SistemaPOS.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
