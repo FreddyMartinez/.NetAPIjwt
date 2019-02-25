@@ -5,3 +5,10 @@ C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.DAL\bin\Rel
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.DAL\obj\Release\SistemaPOS.DAL.csprojResolveAssemblyReference.cache
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.DAL\obj\Release\SistemaPOS.DAL.dll
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.DAL\obj\Release\SistemaPOS.DAL.pdb
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\bin\Release\SistemaPOS.DAL.dll
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\bin\Release\SistemaPOS.DAL.pdb
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\bin\Release\SistemaPOS.Dto.dll
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\bin\Release\SistemaPOS.Dto.pdb
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\obj\Release\SistemaPOS.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\obj\Release\SistemaPOS.DAL.dll
+C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.DAL\obj\Release\SistemaPOS.DAL.pdb

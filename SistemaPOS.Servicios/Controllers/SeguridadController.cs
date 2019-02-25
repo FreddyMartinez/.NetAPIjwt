@@ -2,8 +2,8 @@
 using System.Net;
 using System.Collections.Generic;
 using System.Web.Http;
-using System.Web.Http.Description;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 using SistemaPOS.Dto.Excepciones;
 using SistemaPOS.Dto.Mensajes;
 using ProyectoPOS.BLL;
@@ -11,18 +11,12 @@ using SistemaPOS.Dto.Modelos;
 
 namespace SistemaPOS.Servicios.Controllers
 {
-    /// <summary>
-    /// Clase que da el acceso a los servicios de consulta, registro y modificación de datos de seguridad.
-    /// </summary>
-    /// <remarks>
-    /// Autor:          Freddy Martínez
-    /// Fecha Creación: 14/02/2019
-    /// </remarks>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    [RoutePrefix("Seguridad")]
+    [RoutePrefix("SeguridadPOS")]
     public class SeguridadController : ApiController
     {
         SeguridadNegocio seguridadNegocio;
+
         /// <summary>
         /// Método que expone la versión del Api. 
         /// </summary>
@@ -59,7 +53,7 @@ namespace SistemaPOS.Servicios.Controllers
         [HttpPost]
         [Route("consultarMenu")]
         [ResponseType(typeof(Mensaje))]
-        public IHttpActionResult ConsultarCentroDistribucion()
+        public IHttpActionResult ConsultarMenu()
         {
             try
             {
