@@ -1,19 +1,26 @@
-﻿using SistemaPOS.DAL.Base;
-using System;
+﻿using System;
+using System.Data;
+using SistemaPOS.DAL.Base;
+using SistemaPOS.Dto.Modelos;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoPOS.BLL
 {
     public class SeguridadNegocio
     {
-        public string ConsultarMenu()
+        public List<MenuDto> ConsultarMenu()
         {
             using(UnitOfWork uow = new UnitOfWork())
             {
-                return uow.SeguridadRepositorio.ConsultarMenu();
+                DataTable tblMenu = uow.SeguridadRepositorio.ConsultarMenu();
+                List<MenuDto> listMenu = new List<MenuDto>();
+                MenuDto menuTemp;
+                foreach (DataRow dr in tblMenu.Rows)
+                {
+                    menuTemp = new MenuDto(dr);
+                    listMenu.Add(menuTemp);
+                }
+                return listMenu;
             }
         }
     }

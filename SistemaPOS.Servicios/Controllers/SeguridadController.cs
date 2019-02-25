@@ -7,6 +7,7 @@ using System.Web.Http.Cors;
 using SistemaPOS.Dto.Excepciones;
 using SistemaPOS.Dto.Mensajes;
 using ProyectoPOS.BLL;
+using SistemaPOS.Dto.Modelos;
 
 namespace SistemaPOS.Servicios.Controllers
 {
@@ -55,7 +56,7 @@ namespace SistemaPOS.Servicios.Controllers
         /// <returns>Lista de menú</returns>
         /// Autor:          fmartinez
         /// Fecha Creación: 16-02-2019
-        [HttpGet]
+        [HttpPost]
         [Route("consultarMenu")]
         [ResponseType(typeof(Mensaje))]
         public IHttpActionResult ConsultarCentroDistribucion()
@@ -63,7 +64,7 @@ namespace SistemaPOS.Servicios.Controllers
             try
             {
                 seguridadNegocio = new SeguridadNegocio();
-                string res = seguridadNegocio.ConsultarMenu();
+                List<MenuDto> res = seguridadNegocio.ConsultarMenu();
 
                 return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
             }

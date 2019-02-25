@@ -1,9 +1,8 @@
-C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.dll
-C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.pdb
-C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.csprojResolveAssemblyReference.cache
-C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.dll
-C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.pdb
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.dll
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.pdb
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.dll
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.pdb
