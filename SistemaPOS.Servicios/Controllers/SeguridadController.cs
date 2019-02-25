@@ -40,14 +40,10 @@ namespace SistemaPOS.Servicios.Controllers
             }
             catch (ExcepcionOperacion exOp)
             {
-                //auditoria = new AuditoriaNegocio();
-                //auditoria.registrarError(exOp.Codigo, exOp.Message, "");
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = exOp.Message });
             }
             catch (Exception ex)
             {
-                //auditoria = new AuditoriaNegocio();
-                //auditoria.registrarError(-1, ex.Message, "");
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA + ex.Message });
             }
         }
@@ -73,14 +69,10 @@ namespace SistemaPOS.Servicios.Controllers
             }
             catch (ExcepcionOperacion exOp)
             {
-                //    auditoria = new AuditoriaNegocio();
-                //    auditoria.registrarError(exOp.Codigo, exOp.Message, "");
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
             }
             catch (Exception ex)
             {
-                //auditoria = new AuditoriaNegocio();
-                //auditoria.registrarError(-1, ex.Message, "");
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
             }
         }
