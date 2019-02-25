@@ -1,0 +1,5 @@
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\bin\Release\SistemaPOS.Dto.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\bin\Release\SistemaPOS.Dto.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Release\SistemaPOS.Dto.csprojResolveAssemblyReference.cache
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Release\SistemaPOS.Dto.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\.NetAPIjwt\SistemaPOS.Dto\obj\Release\SistemaPOS.Dto.pdb

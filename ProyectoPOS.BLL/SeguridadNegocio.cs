@@ -17,13 +17,7 @@ namespace ProyectoPOS.BLL
                 MenuDto menuTemp;
                 foreach (DataRow dr in tblMenu.Rows)
                 {
-                    menuTemp = new MenuDto();
-                    menuTemp.id = Convert.ToInt32(dr["id_menu"].ToString());
-                    menuTemp.nombre = dr["nombre"].ToString();
-                    menuTemp.tag = dr["tag"].ToString();
-                    menuTemp.descripcion = dr["descripcion"].ToString();
-                    menuTemp.icono = dr["ruta_icono"].ToString();
-                    menuTemp.activo = Convert.ToBoolean(dr["activo"].ToString());
+                    menuTemp = new MenuDto(dr);
                     listMenu.Add(menuTemp);
                 }
                 return listMenu;
