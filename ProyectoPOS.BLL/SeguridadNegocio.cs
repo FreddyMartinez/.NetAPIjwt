@@ -12,7 +12,8 @@ namespace ProyectoPOS.BLL
         {
             using(UnitOfWork uow = new UnitOfWork())
             {
-                DataTable tblMenu = uow.SeguridadRepositorio.ConsultarMenu();
+                MenuDto menu = new MenuDto(-1, "", "", "", "", true);
+                DataTable tblMenu = uow.SeguridadRepositorio.CrudMenu("C", menu);
                 List<MenuDto> listMenu = new List<MenuDto>();
                 MenuDto menuTemp;
                 foreach (DataRow dr in tblMenu.Rows)
@@ -23,5 +24,18 @@ namespace ProyectoPOS.BLL
                 return listMenu;
             }
         }
+
+        public string CreaModificaMenu(string trans, MenuDto menu)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                DataTable tblMenu = uow.SeguridadRepositorio.CrudMenu(trans, menu);
+                if (tblMenu.Rows[0]["ID"].ToString() != "1")
+                {
+                    throw new Exception(tblMenu.Rows[0]["Mensaje"].ToString());
+                }
+                return tblMenu.Rows[0]["Mensaje"].ToString();
+            }
+        }        
     }
 }

@@ -15,6 +15,16 @@ namespace SistemaPOS.Dto.Modelos
 
         public MenuDto() {}
 
+        public MenuDto(int _id, string _tag, string _nombre, string _descripcion, string _icono, bool _activo)
+        {
+            id = _id;
+            tag = _tag;
+            nombre = _nombre;
+            descripcion = _descripcion;
+            icono = _icono;
+            activo = _activo;
+        }
+
         public MenuDto(DataRow dr)
         {
             id = Convert.ToInt32(dr["id_menu"].ToString());

@@ -10,100 +10,100 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
-      <publishTime>11/28/2018 13:00:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/es/System.Web.Http.resources.dll">
-      <publishTime>11/28/2018 13:01:14</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/es/System.Web.Http.WebHost.resources.dll">
-      <publishTime>11/28/2018 13:03:04</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>06/15/2015 02:06:24</publishTime>
+      <publishTime>02/16/2019 06:55:55</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>02/18/2019 12:13:38</publishTime>
+      <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>02/18/2019 12:13:38</publishTime>
+      <publishTime>06/22/2015 11:06:54</publishTime>
     </File>
     <File Include="bin/ProyectoPOS.BLL.dll">
-      <publishTime>02/24/2019 21:14:38</publishTime>
+      <publishTime>02/24/2019 22:46:39</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>06/18/2015 20:19:44</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>06/18/2015 20:19:46</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/SistemaPOS.DAL.dll">
-      <publishTime>02/24/2019 21:14:38</publishTime>
+      <publishTime>02/24/2019 22:46:39</publishTime>
     </File>
     <File Include="bin/SistemaPOS.Dto.dll">
-      <publishTime>02/24/2019 20:06:23</publishTime>
+      <publishTime>02/24/2019 22:46:39</publishTime>
     </File>
     <File Include="bin/SistemaPOS.Servicios.dll">
-      <publishTime>02/24/2019 21:25:47</publishTime>
+      <publishTime>02/24/2019 22:46:42</publishTime>
     </File>
     <File Include="bin/Swashbuckle.Core.dll">
-      <publishTime>02/18/2019 12:13:38</publishTime>
+      <publishTime>07/08/2017 01:30:56</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>02/18/2019 12:13:30</publishTime>
+      <publishTime>11/28/2018 13:00:36</publishTime>
     </File>
     <File Include="bin/System.Web.Cors.dll">
-      <publishTime>02/18/2019 12:13:30</publishTime>
+      <publishTime>11/28/2018 12:58:44</publishTime>
     </File>
     <File Include="bin/System.Web.Http.Cors.dll">
-      <publishTime>02/18/2019 12:13:30</publishTime>
+      <publishTime>11/28/2018 13:01:26</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>02/18/2019 12:13:30</publishTime>
+      <publishTime>11/28/2018 13:01:00</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>02/18/2019 12:13:30</publishTime>
+      <publishTime>11/28/2018 13:02:56</publishTime>
     </File>
     <File Include="bin/WebActivatorEx.dll">
-      <publishTime>10/05/2016 13:11:52</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>02/24/2019 20:57:21</publishTime>
+      <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>02/24/2019 21:22:22</publishTime>
+      <publishTime>02/24/2019 21:47:48</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/24/2019 21:25:48</publishTime>
+      <publishTime>02/24/2019 22:46:43</publishTime>
     </File>
   </ItemGroup>
 </Project>

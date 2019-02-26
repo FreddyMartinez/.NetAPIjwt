@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SistemaPOS.Dto.Utilidades;
+using SistemaPOS.Dto.Modelos;
 
 namespace SistemaPOS.DAL.Repositorio
 {
     public class SeguridadRepositorio
     {
-        public DataTable ConsultarMenu()
+        public DataTable CrudMenu(string tipoTrans, MenuDto menu)
         {
             using (SqlConnection conn = new SqlConnection(Util.ObtenerCadenaConexion("POS_DB")))
             {
@@ -23,19 +20,19 @@ namespace SistemaPOS.DAL.Repositorio
 
                     //SqlParameters
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
-                     transaccion.Value = "C";
+                     transaccion.Value = tipoTrans;
                     SqlParameter idmenu = new SqlParameter("@p_id_menu", SqlDbType.Int);
-                    idmenu.Value = -1;
+                    idmenu.Value = menu.id;
                     SqlParameter tag = new SqlParameter("@p_tag", SqlDbType.VarChar);
-                    tag.Value = "";
+                    tag.Value = menu.tag;
                     SqlParameter nombre = new SqlParameter("@p_nombre", SqlDbType.VarChar);
-                    nombre.Value = "";
+                    nombre.Value = menu.nombre;
                     SqlParameter descripcion = new SqlParameter("@p_descripcion", SqlDbType.VarChar);
-                    descripcion.Value = "";
+                    descripcion.Value = menu.descripcion;
                     SqlParameter rutaicono = new SqlParameter("@p_ruta_icono", SqlDbType.VarChar);
-                    rutaicono.Value = "";
+                    rutaicono.Value = menu.icono;
                     SqlParameter activo = new SqlParameter("@p_activo", SqlDbType.Int);
-                    activo.Value = 1;
+                    activo.Value = Convert.ToInt16(menu.activo);
                     SqlParameter usuario = new SqlParameter("@p_usuario", SqlDbType.VarChar);
                     usuario.Value = "POS";
 

@@ -46,7 +46,6 @@ namespace SistemaPOS.Servicios.Controllers
         /// <summary>
         /// Método que consulta la lista de ítems del menú.
         /// </summary>
-        /// <param></param>
         /// <returns>Lista de menú</returns>
         /// Autor:          fmartinez
         /// Fecha Creación: 16-02-2019
@@ -59,6 +58,62 @@ namespace SistemaPOS.Servicios.Controllers
             {
                 seguridadNegocio = new SeguridadNegocio();
                 List<MenuDto> res = seguridadNegocio.ConsultarMenu();
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Método que crea un nuevo ítem del menú.
+        /// </summary>
+        /// <returns>Lista de menú</returns>
+        /// Autor:          fmartinez
+        /// Fecha Creación: 25-02-2019
+        [HttpPost]
+        [Route("crearMenu")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult CrearMenu([FromBody] MenuDto menu)
+        {
+            try
+            {
+                seguridadNegocio = new SeguridadNegocio();
+                string res = seguridadNegocio.CreaModificaMenu("I", menu);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Método que modifica un ítem del menú.
+        /// </summary>
+        /// <returns>Lista de menú</returns>
+        /// Autor:          fmartinez
+        /// Fecha Creación: 25-02-2019
+        [HttpPost]
+        [Route("modificarMenu")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult ModificarMenu([FromBody] MenuDto menu)
+        {
+            try
+            {
+                seguridadNegocio = new SeguridadNegocio();
+                string res = seguridadNegocio.CreaModificaMenu("U", menu);
 
                 return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
             }
