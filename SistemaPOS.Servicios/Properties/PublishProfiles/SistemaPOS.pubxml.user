@@ -28,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/22/2015 11:06:54</publishTime>
     </File>
     <File Include="bin/ProyectoPOS.BLL.dll">
-      <publishTime>02/24/2019 22:46:39</publishTime>
+      <publishTime>02/26/2019 17:50:36</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>02/24/2019 21:47:47</publishTime>
@@ -67,13 +67,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/24/2019 21:47:47</publishTime>
     </File>
     <File Include="bin/SistemaPOS.DAL.dll">
-      <publishTime>02/24/2019 22:46:39</publishTime>
+      <publishTime>02/26/2019 17:50:36</publishTime>
     </File>
     <File Include="bin/SistemaPOS.Dto.dll">
-      <publishTime>02/24/2019 22:46:39</publishTime>
+      <publishTime>02/26/2019 17:50:35</publishTime>
     </File>
     <File Include="bin/SistemaPOS.Servicios.dll">
-      <publishTime>02/24/2019 22:46:42</publishTime>
+      <publishTime>02/26/2019 23:35:14</publishTime>
     </File>
     <File Include="bin/Swashbuckle.Core.dll">
       <publishTime>07/08/2017 01:30:56</publishTime>
@@ -88,7 +88,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 13:01:26</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>11/28/2018 13:01:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
       <publishTime>11/28/2018 13:02:56</publishTime>

@@ -126,5 +126,33 @@ namespace SistemaPOS.Servicios.Controllers
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
             }
         }
+
+        /// <summary>
+        /// Método que modifica un ítem del menú.
+        /// </summary>
+        /// <returns>Lista de menú</returns>
+        /// Autor:          fmartinez
+        /// Fecha Creación: 25-02-2019
+        [HttpPost]
+        [Route("eliminarMenu")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult EliminarMenu([FromBody] MenuDto menu)
+        {
+            try
+            {
+                seguridadNegocio = new SeguridadNegocio();
+                string res = seguridadNegocio.CreaModificaMenu("D", menu);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+        }
     }
 }
