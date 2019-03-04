@@ -30,7 +30,7 @@ namespace SistemaPOS.Servicios.Controllers
         {
             try
             {
-                string version = "1.0.1";
+                string version = "1.1.0";
                 return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = version });
             }
             catch (ExcepcionOperacion exOp)
