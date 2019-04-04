@@ -47,7 +47,15 @@
     <Compile Include="Mensajes\Mensaje.cs" />
     <Compile Include="Modelos\GrupoDto.cs" />
     <Compile Include="Modelos\MenuDto.cs" />
+    <Compile Include="Modelos\MenuLateralDto.cs" />
+    <Compile Include="Modelos\ObjetoGenericoDto.cs" />
+    <Compile Include="Modelos\ParametroConsultaDto.cs" />
+    <Compile Include="Modelos\PerfilDto.cs" />
     <Compile Include="Modelos\PermisoDto.cs" />
+    <Compile Include="Modelos\PermisoPerfilDto.cs" />
+    <Compile Include="Modelos\RolDto.cs" />
+    <Compile Include="Modelos\PerfilRolDto.cs" />
+    <Compile Include="Modelos\UsuarioDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\Util.cs" />
   </ItemGroup>

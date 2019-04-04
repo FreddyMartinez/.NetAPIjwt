@@ -16,3 +16,12 @@ C:\Users\Administrador\Documents\personal\.NetAPIjwt\ProyectoPOS.BLL\bin\Release
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\ProyectoPOS.BLL\obj\Release\ProyectoPOS.BLL.csprojResolveAssemblyReference.cache
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\ProyectoPOS.BLL\obj\Release\ProyectoPOS.BLL.dll
 C:\Users\Administrador\Documents\personal\.NetAPIjwt\ProyectoPOS.BLL\obj\Release\ProyectoPOS.BLL.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\Release\ProyectoPOS.BLL.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\Release\ProyectoPOS.BLL.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\Release\SistemaPOS.DAL.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\Release\SistemaPOS.Dto.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\Release\SistemaPOS.DAL.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\Release\SistemaPOS.Dto.pdb
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\obj\Release\ProyectoPOS.BLL.csprojResolveAssemblyReference.cache
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\obj\Release\ProyectoPOS.BLL.dll
+C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\obj\Release\ProyectoPOS.BLL.pdb

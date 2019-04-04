@@ -9,14 +9,25 @@ namespace SistemaPOS.DAL.Base
 {
     public class UnitOfWork : IDisposable
     {
-        private SeguridadRepositorio seguridadRepositorio;
-        public SeguridadRepositorio SeguridadRepositorio
+        private AccesosRepositorio accesosRepositorio;
+        public AccesosRepositorio AccesosRepositorio
         {
             get
             {
-                if (this.seguridadRepositorio == null)
-                    this.seguridadRepositorio = new SeguridadRepositorio();
-                return seguridadRepositorio;
+                if (this.accesosRepositorio == null)
+                    this.accesosRepositorio = new AccesosRepositorio();
+                return accesosRepositorio;
+            }
+        }
+
+        private UsuariosRepositorio usuariosRepositorio;
+        public UsuariosRepositorio UsuariosRepositorio
+        {
+            get
+            {
+                if (this.usuariosRepositorio == null)
+                    this.usuariosRepositorio = new UsuariosRepositorio();
+                return usuariosRepositorio;
             }
         }
         
