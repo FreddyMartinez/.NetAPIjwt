@@ -19,3 +19,10 @@ C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.DAL\bin\D
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.DAL\obj\Debug\SistemaPOS.DAL.csprojResolveAssemblyReference.cache
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.DAL\obj\Debug\SistemaPOS.DAL.dll
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.DAL\obj\Debug\SistemaPOS.DAL.pdb
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\bin\Debug\SistemaPOS.DAL.dll
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\bin\Debug\SistemaPOS.DAL.pdb
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\bin\Debug\SistemaPOS.Dto.dll
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\bin\Debug\SistemaPOS.Dto.pdb
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\obj\Debug\SistemaPOS.DAL.csprojResolveAssemblyReference.cache
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\obj\Debug\SistemaPOS.DAL.dll
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.DAL\obj\Debug\SistemaPOS.DAL.pdb

@@ -25,3 +25,12 @@ C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\bin\
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.csprojResolveAssemblyReference.cache
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.dll
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.pdb
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\bin\Debug\ProyectoPOS.BLL.dll
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\bin\Debug\ProyectoPOS.BLL.pdb
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\bin\Debug\SistemaPOS.DAL.dll
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\bin\Debug\SistemaPOS.Dto.dll
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\bin\Debug\SistemaPOS.DAL.pdb
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\bin\Debug\SistemaPOS.Dto.pdb
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.csprojResolveAssemblyReference.cache
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.dll
+C:\pruebas_proyectos\pos_repo_2\ProyectoPOS.BLL\obj\Debug\ProyectoPOS.BLL.pdb

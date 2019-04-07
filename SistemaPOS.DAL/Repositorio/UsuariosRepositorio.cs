@@ -302,5 +302,43 @@ namespace SistemaPOS.DAL.Repositorio
                 }
             }
         }
+
+        public DataTable CambiarClave(UsuarioDto user)
+        {
+            using (SqlConnection conn = new SqlConnection(Util.ObtenerCadenaConexion("POS_DB")))
+            {
+                try
+                {
+                    string spName = @"[desarrollador].[prcSegUpdPwdUsr]";
+                    SqlCommand cmd = new SqlCommand(spName, conn);
+
+                    SqlParameter usuario = new SqlParameter("@p_usuario", SqlDbType.VarChar);
+                    usuario.Value = user.usuario;
+                    SqlParameter clave = new SqlParameter("@p_clave", SqlDbType.VarChar);
+                    clave.Value = user.clave;
+
+                    cmd.Parameters.Add(usuario);
+                    cmd.Parameters.Add(clave);
+
+                    DataTable tblUsuario = new DataTable();
+
+                    conn.Open();
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.ReturnProviderSpecificTypes = true;
+                    da.Fill(tblUsuario);
+                    da.Dispose();
+
+                    conn.Close();
+
+                    return tblUsuario;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

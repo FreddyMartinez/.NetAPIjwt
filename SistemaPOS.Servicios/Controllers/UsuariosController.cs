@@ -662,5 +662,32 @@ namespace SistemaPOS.Servicios.Controllers
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_PERMISO + ex.Message });
             }
         }
+        /// <summary>
+        /// Método que permite cambia la clave del usuario.
+        /// </summary>
+        /// <returns>resultado operación</returns>
+        /// Autor:          aalamo
+        /// Fecha Creación: 06-04-2019
+        [HttpPost]
+        [Route("cambioClave")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult CambiarClave([FromBody] UsuarioDto usuario)
+        {
+            try
+            {
+                usuariosNegocio = new UsuariosNegocio();
+                string res = usuariosNegocio.CambiarClave(usuario);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+        }
     }
 }

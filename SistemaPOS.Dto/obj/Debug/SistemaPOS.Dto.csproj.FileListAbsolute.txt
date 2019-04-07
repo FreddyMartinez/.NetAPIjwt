@@ -12,3 +12,8 @@ C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.Dto\bin\D
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.csprojResolveAssemblyReference.cache
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.dll
 C:\Users\ENVY 15K\Documents\Coding\JairAcevedo\Admin\WebApi\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.pdb
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.dll
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.Dto\bin\Debug\SistemaPOS.Dto.pdb
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.csprojResolveAssemblyReference.cache
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.dll
+C:\pruebas_proyectos\pos_repo_2\SistemaPOS.Dto\obj\Debug\SistemaPOS.Dto.pdb

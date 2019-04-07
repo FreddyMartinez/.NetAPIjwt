@@ -162,6 +162,20 @@ namespace ProyectoPOS.BLL
             }
         }
 
+        public string CambiarClave(UsuarioDto usuario)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                DataTable tblRol = uow.UsuariosRepositorio.CambiarClave(usuario);
+                if (tblRol.Rows[0]["ID"].ToString() != "1")
+                {
+                    throw new Exception(tblRol.Rows[0]["Mensaje"].ToString());
+                }
+                return tblRol.Rows[0]["Mensaje"].ToString();
+            }
+        }
+
+
         #region lookups
         private List<ObjetoGenericoDto> MapeaObjetoGenerico(DataTable tbl)
         {
