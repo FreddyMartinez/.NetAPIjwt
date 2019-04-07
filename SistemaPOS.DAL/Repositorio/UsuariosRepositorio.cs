@@ -63,11 +63,6 @@ namespace SistemaPOS.DAL.Repositorio
                 }
             }
         }
-        
-        public DataTable ConsultaClientes(string usuario)
-        {
-            return EjecutaSentencia(Constantes.TAG_ID_CLIENTES, usuario);
-        }
 
         public DataTable CrudPermisosPerfil(string tipoTrans, PermisoPerfilDto permisoPerfil)
         {
@@ -221,6 +216,11 @@ namespace SistemaPOS.DAL.Repositorio
         #endregion
 
         #region Lookups
+        public DataTable ConsultaClientes(string usuario)
+        {
+            return EjecutaSentencia(Constantes.TAG_ID_CLIENTES, usuario);
+        }
+
         public DataTable ConsultarTiposRol(string usuario)
         {
             return EjecutaSentencia(Constantes.TAG_ID_ROL, usuario);
