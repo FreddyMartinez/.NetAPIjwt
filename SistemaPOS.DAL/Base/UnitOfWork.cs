@@ -30,7 +30,29 @@ namespace SistemaPOS.DAL.Base
                 return usuariosRepositorio;
             }
         }
-        
+
+        private EmpresasRepositorio empresasRepositorio;
+        public EmpresasRepositorio EmpresasRepositorio
+        {
+            get
+            {
+                if (this.empresasRepositorio == null)
+                    this.empresasRepositorio = new EmpresasRepositorio();
+                return empresasRepositorio;
+            }
+        }
+
+        private ClienteRepositorio clienteRepositorio;
+        public ClienteRepositorio ClienteRepositorio
+        {
+            get
+            {
+                if (this.clienteRepositorio == null)
+                    this.clienteRepositorio = new ClienteRepositorio();
+                return clienteRepositorio;
+            }
+        }
+
         public void Dispose()
         {
             GC.SuppressFinalize(this);

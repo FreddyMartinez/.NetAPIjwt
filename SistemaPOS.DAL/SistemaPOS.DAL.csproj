@@ -46,6 +46,8 @@
     <Compile Include="Base\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\AccesosRepositorio.cs" />
+    <Compile Include="Repositorio\ClienteRepositorio.cs" />
+    <Compile Include="Repositorio\EmpresasRepositorio.cs" />
     <Compile Include="Repositorio\UsuariosRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>

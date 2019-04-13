@@ -16,6 +16,11 @@ namespace SistemaPOS.DAL
         public const string TAG_ID_CLIENTES = "LKPTOTCTE";
         public const string TAG_ID_ROL = "LKPROL";
         public const string TAG_ID_DOCUMENTO = "LKPTIPODOC";
+        public const string TAG_TIPO_SUCURSAL = "LKPTIPSUC";
+        public const string TAG_EMPRESA_CLIENTE = "LKPEMPCTE ";
+        public const string TAG_CLIENTE_PRINCIPAL = "LKPCTEPPAL";
+        public const string TAG_CLIENTE_REFERIDO = "LKPCTEREF";
+
         #endregion
     }
 }

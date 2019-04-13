@@ -45,6 +45,8 @@
     <Compile Include="Excepciones\ExcepcionOperacion.cs" />
     <Compile Include="Mensajes\Catalogo.cs" />
     <Compile Include="Mensajes\Mensaje.cs" />
+    <Compile Include="Modelos\ClienteDto.cs" />
+    <Compile Include="Modelos\SucursalEmpresa.cs" />
     <Compile Include="Modelos\GrupoDto.cs" />
     <Compile Include="Modelos\MenuDto.cs" />
     <Compile Include="Modelos\MenuLateralDto.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="Modelos\PermisoPerfilDto.cs" />
     <Compile Include="Modelos\RolDto.cs" />
     <Compile Include="Modelos\PerfilRolDto.cs" />
+    <Compile Include="Modelos\EmpresaDto.cs" />
     <Compile Include="Modelos\UsuarioDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\Util.cs" />
