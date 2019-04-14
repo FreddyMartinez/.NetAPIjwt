@@ -43,13 +43,16 @@ namespace SistemaPOS.Dto.Modelos
             clienteReferidor = _clienteReferidor;
             activo = _activo;
             usuario = _usuario;
-
         }
 
         public ClienteDto(DataRow dr)
         {
-            usuario = dr["USUARIO"].ToString();
-
+            idCliente = Convert.ToInt32(dr["id_cliente"].ToString());
+            nombre = dr["nombres"].ToString();
+            apellido = dr["apellidos"].ToString();
+            tipoDocumento = Convert.ToInt32(dr["id_tipo_documento"].ToString());
+            documento = dr["documento"].ToString();
+            email = dr["email"].ToString();
         }
     }
 }

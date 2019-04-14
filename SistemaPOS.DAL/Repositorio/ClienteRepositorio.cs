@@ -31,7 +31,7 @@ namespace SistemaPOS.DAL.Repositorio
                     apellido.Value = cliente.apellido;
                     SqlParameter tipoDocumento = new SqlParameter("@p_id_tipo_documento", SqlDbType.Int);
                     tipoDocumento.Value = cliente.tipoDocumento;
-                    SqlParameter documento = new SqlParameter("@p_documento", SqlDbType.Int);
+                    SqlParameter documento = new SqlParameter("@p_documento", SqlDbType.VarChar);
                     documento.Value = cliente.documento;
                     SqlParameter email = new SqlParameter("@p_email", SqlDbType.VarChar);
                     email.Value = cliente.email;
@@ -48,7 +48,7 @@ namespace SistemaPOS.DAL.Repositorio
                     SqlParameter activo = new SqlParameter("@p_activo", SqlDbType.Int);
                     activo.Value = Convert.ToInt16(cliente.activo);
                     SqlParameter usuario = new SqlParameter("@p_usuario", SqlDbType.VarChar);
-                    usuario.Value = "POS";
+                    usuario.Value = cliente.usuario;
 
                     cmd.Parameters.Add(transaccion);
                     cmd.Parameters.Add(idCliente);
@@ -91,17 +91,17 @@ namespace SistemaPOS.DAL.Repositorio
         #region Lookups
         public DataTable ConsultaTipoDocumento()
         {
-            return EjecutaSentencia(Constantes.TAG_ID_DOCUMENTO, "");
+            return EjecutaSentencia(Constantes.TAG_ID_DOCUMENTO, "DESARROLLADOR", "");
         }
 
         public DataTable ConsultarClientePrincipal()
         {
-            return EjecutaSentencia(Constantes.TAG_CLIENTE_PRINCIPAL, "");
+            return EjecutaSentencia(Constantes.TAG_CLIENTE_PRINCIPAL, "DESARROLLADOR", "");
         }
 
         public DataTable ConsultarClienteReferido()
         {
-            return EjecutaSentencia(Constantes.TAG_CLIENTE_REFERIDO, "");
+            return EjecutaSentencia(Constantes.TAG_CLIENTE_REFERIDO, "DESARROLLADOR", "");
         }
         #endregion
     }

@@ -113,7 +113,7 @@ namespace SistemaPOS.Servicios.Controllers
         /// Autor:          aalmao
         /// Fecha Creación: 13-04-2019
         [HttpPost]
-        [Route("EditarSucursalEmpresa")]
+        [Route("editarSucursalEmpresa")]
         [ResponseType(typeof(Mensaje))]
         public IHttpActionResult EditarSucursalEmpresa([FromBody] SucursalEmpresaDto sucursalEmpresa)
         {
@@ -170,14 +170,14 @@ namespace SistemaPOS.Servicios.Controllers
         /// Autor:          aalamo
         /// Fecha Creación: 12-04-2019
         [HttpPost]
-        [Route("ConsultarEmpresasCliente")]
+        [Route("consultarEmpresasCliente")]
         [ResponseType(typeof(Mensaje))]
-        public IHttpActionResult ConsultarEmpresasCliente(string idCliente)
+        public IHttpActionResult ConsultarEmpresasCliente([FromBody] ParametroConsultaDto idCliente)
         {
             try
             {
                 empresasNegocio = new EmpresasNegocio();
-                List<ObjetoGenericoDto> res = empresasNegocio.ConsultarEmpresasCliente(idCliente);
+                List<ObjetoGenericoDto> res = empresasNegocio.ConsultarEmpresasCliente(idCliente.parametro);
 
                 return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
             }

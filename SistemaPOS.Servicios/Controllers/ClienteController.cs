@@ -27,9 +27,38 @@ namespace SistemaPOS.Servicios.Controllers
         /// Autor:          aalamo
         /// Fecha Creación: 13-04-2019
         [HttpPost]
+        [Route("consultarClientes")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult ConsultarClientes([FromBody] ParametroConsultaDto usuario)
+        {
+            try
+            {
+                clienteNegocio = new ClienteNegocio();
+                List<ClienteDto> res = clienteNegocio.ConsultarClientes(usuario.parametro);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+
+        }
+
+        /// <summary>
+        /// metodo que permite agregar un nuevo cliente
+        /// </summary>
+        /// <returns>cliente</returns>
+        /// Autor:          aalamo
+        /// Fecha Creación: 13-04-2019
+        [HttpPost]
         [Route("crearCliente")]
         [ResponseType(typeof(Mensaje))]
-        public IHttpActionResult CrearEmpresa ([FromBody] ClienteDto cliente)
+        public IHttpActionResult CrearCliente([FromBody] ClienteDto cliente)
         {
             try
             {
@@ -56,7 +85,7 @@ namespace SistemaPOS.Servicios.Controllers
         /// Autor:          aalmao
         /// Fecha Creación: 13-04-2019
         [HttpPost]
-        [Route("EditarCliente")]
+        [Route("editarCliente")]
         [ResponseType(typeof(Mensaje))]
         public IHttpActionResult EditarCliente([FromBody] ClienteDto cliente)
         {

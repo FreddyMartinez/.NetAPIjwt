@@ -11,7 +11,7 @@ namespace SistemaPOS.Dto.Modelos
     {
         public int id { get; set; }
         public string nombre { get; set; }
-
+        public string icono { get; set; }
         public List<GrupoMenuLateralDto> grupos { get; set; }
 
         public MenuLateralDto(){}
@@ -19,6 +19,7 @@ namespace SistemaPOS.Dto.Modelos
         {
             id = Convert.ToInt32(dr["ID_MENU"].ToString());
             nombre = dr["MENU"].ToString();
+            icono = dr["RUTA_ICONO_MENU"].ToString();
             grupos = new List<GrupoMenuLateralDto>();
         }
     }

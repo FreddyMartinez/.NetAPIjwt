@@ -258,24 +258,24 @@ namespace SistemaPOS.DAL.Repositorio
 
         public DataTable ConsultaMenuLateral(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_MENU_LATERAL, usuario);
+            return EjecutaSentencia(Constantes.TAG_MENU_LATERAL, usuario, "");
         }
 
 
         public DataTable ConsultaTipoMenu(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_TIPO_MENU, usuario);
+            return EjecutaSentencia(Constantes.TAG_TIPO_MENU, usuario, "");
         }
 
 
         public DataTable ConsultaTipoGrupo(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_TIPO_GRUPO, usuario);
+            return EjecutaSentencia(Constantes.TAG_TIPO_GRUPO, usuario, "");
         }
         
         public DataTable ConsultaTipoPermiso(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_TIPO_PERMISO, usuario);
+            return EjecutaSentencia(Constantes.TAG_TIPO_PERMISO, usuario, "");
         }
     }
 }

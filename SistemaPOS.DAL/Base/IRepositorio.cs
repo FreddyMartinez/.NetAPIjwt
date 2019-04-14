@@ -9,6 +9,6 @@ namespace SistemaPOS.DAL.Base
 {
     public interface IRepositorio
     {
-        DataTable EjecutaSentencia(string tag, string usuario);
+        DataTable EjecutaSentencia(string tag, string usuario, string parametros);
     }
 }

@@ -218,17 +218,17 @@ namespace SistemaPOS.DAL.Repositorio
         #region Lookups
         public DataTable ConsultaClientes(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_ID_CLIENTES, usuario);
+            return EjecutaSentencia(Constantes.TAG_ID_CLIENTES, usuario, "");
         }
 
         public DataTable ConsultarTiposRol(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_ID_ROL, usuario);
+            return EjecutaSentencia(Constantes.TAG_ID_ROL, usuario, "");
         }
 
         public DataTable ConsultarTiposDocumento(string usuario)
         {
-            return EjecutaSentencia(Constantes.TAG_ID_DOCUMENTO, usuario);
+            return EjecutaSentencia(Constantes.TAG_ID_DOCUMENTO, usuario, "");
         }
         #endregion
 

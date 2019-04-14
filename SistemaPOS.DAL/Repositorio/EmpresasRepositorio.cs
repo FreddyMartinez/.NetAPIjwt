@@ -168,12 +168,12 @@ namespace SistemaPOS.DAL.Repositorio
         #region Lookups
         public DataTable ConsultaTipoSucursal()
         {
-            return EjecutaSentencia(Constantes.TAG_TIPO_SUCURSAL, "");
+            return EjecutaSentencia(Constantes.TAG_TIPO_SUCURSAL, "DESARROLLADOR", "");
         }
 
         public DataTable ConsultarEmpresasCliente(string idCliente)
         {
-            return EjecutaSentencia(Constantes.TAG_EMPRESA_CLIENTE, idCliente);
+            return EjecutaSentencia(Constantes.TAG_EMPRESA_CLIENTE, "DESARROLLADOR", idCliente);
         }
         
         #endregion

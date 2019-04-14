@@ -8,7 +8,24 @@ namespace ProyectoPOS.BLL
 {
     public class ClienteNegocio
     {
-        #region empresa    
+        #region Cliente    
+        public List<ClienteDto> ConsultarClientes(string usuario)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                ClienteDto cliente = new ClienteDto(-1, "", "", -1, "", "", "", "", "", -1, -1, true, usuario);
+                DataTable tblRol = uow.ClienteRepositorio.CrudCliente("C", cliente);
+                List<ClienteDto> listClientes = new List<ClienteDto>();
+                ClienteDto ClienteTemp;
+                foreach (DataRow dr in tblRol.Rows)
+                {
+                    ClienteTemp = new ClienteDto(dr);
+                    listClientes.Add(ClienteTemp);
+                }
+                return listClientes;
+            }
+        }
+
         public string CreaModificaCliente(string trans, ClienteDto cliente)
         {
             using (UnitOfWork uow = new UnitOfWork())
@@ -21,7 +38,6 @@ namespace ProyectoPOS.BLL
                 return tblRol.Rows[0]["Mensaje"].ToString();
             }
         }
-
         #endregion
         
         #region lookups
