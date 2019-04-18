@@ -22,18 +22,22 @@ namespace ProyectoPOS.BLL
             }
         }
 
-        //public string CambiarClave(UsuarioDto usuario)
-        //{
-        //    using (UnitOfWork uow = new UnitOfWork())
-        //    {
-        //        DataTable tblRol = uow.UsuariosRepositorio.CambiarClave(usuario);
-        //        if (tblRol.Rows[0]["ID"].ToString() != "1")
-        //        {
-        //            throw new Exception(tblRol.Rows[0]["Mensaje"].ToString());
-        //        }
-        //        return tblRol.Rows[0]["Mensaje"].ToString();
-        //    }
-        //}
+        public List<EmpresaDto> ConsultarEmpresa(string usuario)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                EmpresaDto empresa = new EmpresaDto(-1, -1, "", "", "", "", "", "", "", "", "", "", true, usuario);
+                DataTable tblRol = uow.EmpresasRepositorio.CrudEmpresa("C", empresa);
+                List<EmpresaDto> listEmpresas = new List<EmpresaDto>();
+                EmpresaDto ClienteTemp;
+                foreach (DataRow dr in tblRol.Rows)
+                {
+                    ClienteTemp = new EmpresaDto(dr);
+                    listEmpresas.Add(ClienteTemp);
+                }
+                return listEmpresas;
+            }
+        }
 
         #endregion
         #region SucursalEmpresa

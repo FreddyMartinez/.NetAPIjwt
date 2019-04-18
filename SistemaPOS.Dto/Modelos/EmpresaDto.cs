@@ -49,7 +49,19 @@ namespace SistemaPOS.Dto.Modelos
 
         public EmpresaDto(DataRow dr)
         {
-            usuario = dr["USUARIO"].ToString();
+         
+            idEmpresa = Convert.ToInt32(dr["id_Empresa"].ToString());
+            idCliente = Convert.ToInt32(dr["id_Cliente"].ToString());
+            nombre = dr["nombres"].ToString();
+            nit = dr["nit"].ToString();
+            digitoVerificacion = dr["digito_verificacion"].ToString();
+            direccion = dr["direccion"].ToString();
+            barrio = dr["id_barrio"].ToString();
+            telefono = dr["telefono"].ToString(); 
+            email = dr["email"].ToString(); 
+            contacto = dr["contacto"].ToString(); 
+            telefonoContacto = dr["telefono_contacto"].ToString(); 
+            emailContacto = dr["email_contacto"].ToString();
 
         }
     }

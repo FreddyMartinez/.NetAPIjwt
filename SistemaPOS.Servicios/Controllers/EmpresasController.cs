@@ -78,6 +78,36 @@ namespace SistemaPOS.Servicios.Controllers
             }
 
         }
+
+        /// <summary>
+        /// metodo que permite consultar una empresa
+        /// </summary>
+        /// <returns>Empresa</returns>
+        /// Autor:          aalamo
+        /// Fecha Creación: 13-04-2019
+        [HttpPost]
+        [Route("consultarEmpresa")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult ConsultarEmpresa([FromBody] ParametroConsultaDto usuario)
+        {
+            try
+            {
+                
+                List<EmpresaDto> res = empresasNegocio.ConsultarEmpresa(usuario.parametro);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+
+        }
+
         /// <summary>
         /// metodo que permite crear un registro de sucursal-empresa
         /// </summary>
@@ -144,7 +174,7 @@ namespace SistemaPOS.Servicios.Controllers
         [HttpPost]
         [Route("consultarTipoSucursal")]
         [ResponseType(typeof(Mensaje))]
-        public IHttpActionResult consultarTipoSucursal()
+        public IHttpActionResult ConsultarTipoSucursal()
         {
             try
             {
