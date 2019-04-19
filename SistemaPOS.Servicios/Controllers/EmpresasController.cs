@@ -80,6 +80,34 @@ namespace SistemaPOS.Servicios.Controllers
         }
 
         /// <summary>
+        /// metodo que permite eliminar una empreasa
+        /// </summary>
+        /// <returns>Empresas</returns>
+        /// Autor:          aalmao
+        /// Fecha Creación: 13-04-2019
+        [HttpPost]
+        [Route("eliminarEmpresa")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult EliminarEmpresa([FromBody] EmpresaDto empresa)
+        {
+            try
+            {
+                empresasNegocio = new EmpresasNegocio();
+                string res = empresasNegocio.CreaModificaEmpresa("D", empresa);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+
+        }
+        /// <summary>
         /// metodo que permite consultar una empresa
         /// </summary>
         /// <returns>Empresa</returns>
