@@ -53,6 +53,13 @@ namespace SistemaPOS.Dto.Modelos
             tipoDocumento = Convert.ToInt32(dr["id_tipo_documento"].ToString());
             documento = dr["documento"].ToString();
             email = dr["email"].ToString();
+            telefono = dr["telefono"].ToString();
+            direccion = dr["direccion"].ToString();
+            barrio = dr["id_barrio"].ToString();
+            clientePrincipal = Convert.ToInt32(dr["id_cliente_principal"].ToString());
+            clienteReferidor = Convert.ToInt32(dr["id_cliente_referidor"].ToString());
+            activo = Convert.ToBoolean(dr["activo"].ToString());
+            usuario = dr["usr_creacion"].ToString();
         }
     }
 }
