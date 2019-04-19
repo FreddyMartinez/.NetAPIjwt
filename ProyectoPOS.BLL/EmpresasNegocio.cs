@@ -22,11 +22,11 @@ namespace ProyectoPOS.BLL
             }
         }
 
-        public List<EmpresaDto> ConsultarEmpresa(string usuario)
+        public List<EmpresaDto> ConsultarEmpresa(ObjetoGenericoDto usuario)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                EmpresaDto empresa = new EmpresaDto(-1, -1, "", "", "", "", "", "", "", "", "", "", true, usuario);
+                EmpresaDto empresa = new EmpresaDto(-1, usuario.llave, "", "", "", "", "", "", true, usuario.valor);
                 DataTable tblRol = uow.EmpresasRepositorio.CrudEmpresa("C", empresa);
                 List<EmpresaDto> listEmpresas = new List<EmpresaDto>();
                 EmpresaDto ClienteTemp;

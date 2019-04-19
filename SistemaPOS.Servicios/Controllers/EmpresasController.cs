@@ -86,14 +86,14 @@ namespace SistemaPOS.Servicios.Controllers
         /// Autor:          aalamo
         /// Fecha Creación: 13-04-2019
         [HttpPost]
-        [Route("consultarEmpresa")]
+        [Route("consultarEmpresas")]
         [ResponseType(typeof(Mensaje))]
-        public IHttpActionResult ConsultarEmpresa([FromBody] ParametroConsultaDto usuario)
+        public IHttpActionResult ConsultarEmpresa([FromBody] ObjetoGenericoDto usuario)
         {
             try
             {
-                
-                List<EmpresaDto> res = empresasNegocio.ConsultarEmpresa(usuario.parametro);
+                empresasNegocio = new EmpresasNegocio();
+                List<EmpresaDto> res = empresasNegocio.ConsultarEmpresa(usuario);
 
                 return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
             }

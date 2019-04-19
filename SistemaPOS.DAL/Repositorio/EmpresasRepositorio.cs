@@ -33,14 +33,6 @@ namespace SistemaPOS.DAL.Repositorio
                     nit.Value = empresa.nit;
                     SqlParameter digitoVerificacion = new SqlParameter("@p_digito_verificacion", SqlDbType.VarChar);
                     digitoVerificacion.Value = empresa.digitoVerificacion;
-                    SqlParameter direccion = new SqlParameter("@p_direccion", SqlDbType.VarChar);
-                    direccion.Value = empresa.direccion;
-                    SqlParameter barrio = new SqlParameter("@p_id_barrio", SqlDbType.VarChar);
-                    barrio.Value = empresa.barrio;
-                    SqlParameter telefono = new SqlParameter("@p_telefono", SqlDbType.VarChar);
-                    telefono.Value = empresa.telefono;
-                    SqlParameter email = new SqlParameter("@p_email", SqlDbType.VarChar);
-                    email.Value = empresa.email;
                     SqlParameter contacto = new SqlParameter("@p_contacto", SqlDbType.VarChar);
                     contacto.Value = empresa.contacto;
                     SqlParameter telefonoContacto = new SqlParameter("@p_telefono_contacto", SqlDbType.VarChar);
@@ -58,10 +50,6 @@ namespace SistemaPOS.DAL.Repositorio
                     cmd.Parameters.Add(nombre);
                     cmd.Parameters.Add(nit);
                     cmd.Parameters.Add(digitoVerificacion);
-                    cmd.Parameters.Add(direccion);
-                    cmd.Parameters.Add(barrio);
-                    cmd.Parameters.Add(telefono);
-                    cmd.Parameters.Add(email);
                     cmd.Parameters.Add(contacto);
                     cmd.Parameters.Add(telefonoContacto);
                     cmd.Parameters.Add(emailContacto);

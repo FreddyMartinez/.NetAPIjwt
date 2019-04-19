@@ -14,10 +14,6 @@ namespace SistemaPOS.Dto.Modelos
         public string nombre { get; set; }
         public string nit { get; set; }
         public string digitoVerificacion { get; set; }
-        public string direccion { get; set; }
-        public string barrio { get; set; }
-        public string telefono { get; set; }
-        public string email { get; set; }
         public string contacto { get; set; }
         public string telefonoContacto { get; set; }
         public string emailContacto { get; set; }
@@ -26,19 +22,14 @@ namespace SistemaPOS.Dto.Modelos
 
         public EmpresaDto(){}
 
-        public EmpresaDto(int _idEmpresa, int _idCliente, string _nombre, string _nit, string _digitoVerificacion, string _direccion, 
-                          string _barrio, string _telefono, string _email, string _contacto, string _telefonoContacto, string _emailContacto, 
-                          bool _activo, string _usuario)
+        public EmpresaDto(int _idEmpresa, int _idCliente, string _nombre, string _nit, string _digitoVerificacion,  
+                          string _contacto, string _telefonoContacto, string _emailContacto, bool _activo, string _usuario)
         {
             idEmpresa = _idEmpresa;
             idCliente = _idCliente;
             nombre = _nombre;
             nit = _nit;
             digitoVerificacion = _digitoVerificacion;
-            direccion = _direccion;
-            barrio = _barrio;
-            telefono = _telefono;
-            email = _email;
             contacto = _contacto;
             telefonoContacto = _telefonoContacto;
             emailContacto = _emailContacto;
@@ -52,13 +43,9 @@ namespace SistemaPOS.Dto.Modelos
          
             idEmpresa = Convert.ToInt32(dr["id_Empresa"].ToString());
             idCliente = Convert.ToInt32(dr["id_Cliente"].ToString());
-            nombre = dr["nombres"].ToString();
+            nombre = dr["nombre"].ToString();
             nit = dr["nit"].ToString();
             digitoVerificacion = dr["digito_verificacion"].ToString();
-            direccion = dr["direccion"].ToString();
-            barrio = dr["id_barrio"].ToString();
-            telefono = dr["telefono"].ToString(); 
-            email = dr["email"].ToString(); 
             contacto = dr["contacto"].ToString(); 
             telefonoContacto = dr["telefono_contacto"].ToString(); 
             emailContacto = dr["email_contacto"].ToString();
