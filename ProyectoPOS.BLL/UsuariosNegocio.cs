@@ -166,12 +166,19 @@ namespace ProyectoPOS.BLL
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                DataTable tblRol = uow.UsuariosRepositorio.CambiarClave(usuario);
-                if (tblRol.Rows[0]["ID"].ToString() != "1")
+                if(uow.AccesosRepositorio.ValidaUsuario(usuario.usuario, usuario.email))
                 {
-                    throw new Exception(tblRol.Rows[0]["Mensaje"].ToString());
+                    DataTable tblRol = uow.UsuariosRepositorio.CambiarClave(usuario);
+                    if (tblRol.Rows[0]["ID"].ToString() != "1")
+                    {
+                        throw new Exception(tblRol.Rows[0]["Mensaje"].ToString());
+                    }
+                    return tblRol.Rows[0]["Mensaje"].ToString();
                 }
-                return tblRol.Rows[0]["Mensaje"].ToString();
+                else
+                {
+                    throw new Exception("La contraseña antigua es incorrecta");
+                }
             }
         }
 
