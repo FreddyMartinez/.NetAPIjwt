@@ -1,0 +1,11 @@
+ProyectoPOS.BLL/obj/
+ProyectoPOS.BLL/bin/
+
+SistemaPOS.DAL/obj/
+SistemaPOS.DAL/bin/
+
+SistemaPOS.Dto/obj/
+SistemaPOS.Dto/bin/
+
+SistemaPOS.Servicios/obj/
+SistemaPOS.Servicios/bin/
