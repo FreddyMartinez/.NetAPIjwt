@@ -83,7 +83,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcCteEmpresa]";
+                    string spName = @"[desarrollador].[prcCteSucursalEmpresa]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);

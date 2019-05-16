@@ -53,6 +53,24 @@ namespace ProyectoPOS.BLL
                 return tblRol.Rows[0]["Mensaje"].ToString();
             }
         }
+
+        public List<SucursalEmpresaDto> ConsultarSucursal(ObjetoGenericoDto empresa)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                SucursalEmpresaDto sucursal = new SucursalEmpresaDto (-1, -1, empresa.llave, "", "", "", "", "", "", "", "", true, empresa.valor);
+                DataTable tblRol = uow.EmpresasRepositorio.CrudSucursalEmpresa("C", sucursal);
+                List<SucursalEmpresaDto> listSucursal = new List<SucursalEmpresaDto>();
+                SucursalEmpresaDto SucursalTemp;
+                foreach (DataRow dr in tblRol.Rows)
+                {
+                    SucursalTemp = new SucursalEmpresaDto(dr);
+                    listSucursal.Add(SucursalTemp);
+                }
+                return listSucursal;
+            }
+        }
+
         #endregion
 
         #region lookups
