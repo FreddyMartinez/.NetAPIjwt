@@ -16,7 +16,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegUsuarioValido]";
+                    string spName = @"[dbo].[prcSegUsuarioValido]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     cmd.Parameters.Add("@p_usuario", SqlDbType.VarChar);
@@ -51,7 +51,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string funcion = @"select [desarrollador].[fncSegUsuarioValido](@USUARIO, @CLAVE)";
+                    string funcion = @"select [dbo].[fncSegUsuarioValido](@USUARIO, @CLAVE)";
                     SqlCommand cmd = new SqlCommand(funcion, conn);
                     cmd.Parameters.Add("@USUARIO", SqlDbType.VarChar);
                     cmd.Parameters["@USUARIO"].Value = usuario;
@@ -79,7 +79,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegMenu]";
+                    string spName = @"[dbo].[prcSegMenu]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
                     
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -135,7 +135,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegGrupo]";
+                    string spName = @"[dbo].[prcSegGrupo]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
                     
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -194,7 +194,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegPermiso]";
+                    string spName = @"[dbo].[prcSegPermiso]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
                     
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
