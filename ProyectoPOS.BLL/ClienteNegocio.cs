@@ -13,7 +13,7 @@ namespace ProyectoPOS.BLL
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                ClienteDto cliente = new ClienteDto(-1, "", "", -1, "", "", "", "", "", -1, -1, true, usuario);
+                ClienteDto cliente = new ClienteDto(-1, "", "", -1, "", "", "", "", "", -1, -1, true, usuario,"","","","","","");
                 DataTable tblRol = uow.ClienteRepositorio.CrudCliente("C", cliente);
                 List<ClienteDto> listClientes = new List<ClienteDto>();
                 ClienteDto ClienteTemp;
@@ -30,6 +30,11 @@ namespace ProyectoPOS.BLL
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
+                if (trans == "I")
+                {
+                    cliente.idCliente = -1;
+                }
+                cliente.barrio = "-1";
                 DataTable tblRol = uow.ClienteRepositorio.CrudCliente(trans, cliente);
                 if (tblRol.Rows[0]["ID"].ToString() != "1")
                 {

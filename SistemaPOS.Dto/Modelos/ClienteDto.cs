@@ -9,7 +9,7 @@ namespace SistemaPOS.Dto.Modelos
 {
     public class ClienteDto
     {
-        
+
         public int idCliente { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
@@ -23,11 +23,19 @@ namespace SistemaPOS.Dto.Modelos
         public int clienteReferidor { get; set; }
         public bool activo { get; set; }
         public string usuario { get; set; }
+        public string fechaCreacion { get; set; }
+        public string usrModificacion { get; set; }
+        public string fechaModificacion { get; set; }
+        public string tipoDocumentoDes { get; set; }
+        public string nombreClientePrincipal { get; set; }
+        public string nombreClientereferido { get; set; }
+
 
         public ClienteDto(){}
 
         public ClienteDto(int _idCliente, string _nombre, string _apellido, int _tipoDocumento, string _documento, string _email, string _telefono, string _direccion, 
-                          string _barrio,  int _clientePrincipal, int _clienteReferidor, bool _activo, string _usuario)
+                          string _barrio,  int _clientePrincipal, int _clienteReferidor, bool _activo, string _usuario, string _fechaCreacion, string _usrModificacion,
+                          string _fechaModificacion, string _tipoDocumentoDes, string _nombreClientePrincipal, string _nombreClientereferido)
         {
             
             idCliente = _idCliente;
@@ -43,6 +51,14 @@ namespace SistemaPOS.Dto.Modelos
             clienteReferidor = _clienteReferidor;
             activo = _activo;
             usuario = _usuario;
+            fechaCreacion = _fechaCreacion;
+            usrModificacion = _usrModificacion;
+            fechaModificacion = _fechaModificacion;
+            tipoDocumentoDes = _tipoDocumentoDes;
+            nombreClientePrincipal = _nombreClientePrincipal;
+            nombreClientereferido = _nombreClientereferido;
+
+
         }
 
         public ClienteDto(DataRow dr)
@@ -60,6 +76,12 @@ namespace SistemaPOS.Dto.Modelos
             clienteReferidor = Convert.ToInt32(dr["id_cliente_referidor"].ToString());
             activo = Convert.ToBoolean(dr["activo"].ToString());
             usuario = dr["usr_creacion"].ToString();
+            fechaCreacion = dr["fecha_creacion"].ToString();
+            usrModificacion = dr["usr_modificacion"].ToString();
+            fechaModificacion = dr["fecha_modificacion"].ToString();
+            tipoDocumentoDes = dr["tipo_documento"].ToString();
+            nombreClientePrincipal = dr["cliente_principal"].ToString();
+            nombreClientereferido = dr["cliente_referidor"].ToString();
         }
     }
 }
