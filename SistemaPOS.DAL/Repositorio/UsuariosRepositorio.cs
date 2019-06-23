@@ -17,7 +17,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegPerfil]";
+                    string spName = @"[dbo].[prcSegPerfil]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -70,7 +70,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegPerfilPermiso]";
+                    string spName = @"[dbo].[prcSegPerfilPermiso]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -120,7 +120,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegRol]";
+                    string spName = @"[dbo].[prcSegRol]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -173,7 +173,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegRolPerfil]";
+                    string spName = @"[dbo].[prcSegRolPerfil]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -238,7 +238,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegUsuario]";
+                    string spName = @"[dbo].[prcSegUsuario]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -309,7 +309,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcSegUpdPwdUsr]";
+                    string spName = @"[dbo].[prcSegUpdPwdUsr]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter usuario = new SqlParameter("@p_usuario", SqlDbType.VarChar);

@@ -18,7 +18,7 @@ namespace SistemaPOS.DAL.Repositorio
             {
                 try
                 {
-                    string spName = @"[desarrollador].[prcCteCliente]";
+                    string spName = @"[dbo].[prcCteCliente]";
                     SqlCommand cmd = new SqlCommand(spName, conn);
 
                     SqlParameter transaccion = new SqlParameter("@p_transaccion", SqlDbType.VarChar);
@@ -91,17 +91,17 @@ namespace SistemaPOS.DAL.Repositorio
         #region Lookups
         public DataTable ConsultaTipoDocumento()
         {
-            return EjecutaSentencia(Constantes.TAG_ID_DOCUMENTO, "DESARROLLADOR", "");
+            return EjecutaSentencia(Constantes.TAG_ID_DOCUMENTO, "dbo", "");
         }
 
         public DataTable ConsultarClientePrincipal()
         {
-            return EjecutaSentencia(Constantes.TAG_CLIENTE_PRINCIPAL, "DESARROLLADOR", "");
+            return EjecutaSentencia(Constantes.TAG_CLIENTE_PRINCIPAL, "dbo", "");
         }
 
         public DataTable ConsultarClienteReferido()
         {
-            return EjecutaSentencia(Constantes.TAG_CLIENTE_REFERIDO, "DESARROLLADOR", "");
+            return EjecutaSentencia(Constantes.TAG_CLIENTE_REFERIDO, "dbo", "");
         }
         #endregion
     }

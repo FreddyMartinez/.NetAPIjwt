@@ -47,7 +47,17 @@ namespace SistemaPOS.Dto.Modelos
 
         public SucursalEmpresaDto(DataRow dr)
         {
-            usuario = dr["USUARIO"].ToString();
+            idSucursal = Convert.ToInt32(dr["id_sucursal"].ToString());
+            idTipoSucursal = Convert.ToInt32(dr["id_tipo_sucursal"].ToString());
+            idEmpresa = Convert.ToInt32(dr["id_Empresa"].ToString());
+            nombre = dr["nombre"].ToString();
+            direccion = dr["direccion"].ToString();
+            barrio = dr["id_barrio"].ToString();
+            telefono = dr["telefono"].ToString();
+            email = dr["email"].ToString();
+            contacto = dr["contacto"].ToString();
+            telefonoContacto = dr["telefono_contacto"].ToString();
+            emailContacto = dr["email_contacto"].ToString();
 
         }
     }

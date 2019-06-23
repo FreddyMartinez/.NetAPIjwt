@@ -17,7 +17,7 @@ namespace SistemaPOS.DAL.Base
             {
                 try
                 {
-                    string funcion = @"SELECT desarrollador.fncSQLGetScriptTag(@TAG, @USUARIO, @PARAMETROS)";
+                    string funcion = @"SELECT dbo.fncSQLGetScriptTag(@TAG, @USUARIO, @PARAMETROS)";
                     SqlCommand cmd = new SqlCommand(funcion, conn);
                     cmd.Parameters.Add("@TAG", SqlDbType.VarChar);
                     cmd.Parameters["@TAG"].Value = tag;

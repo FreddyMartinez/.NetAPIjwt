@@ -194,6 +194,35 @@ namespace SistemaPOS.Servicios.Controllers
         }
 
         /// <summary>
+        /// metodo que permite consultar una las sucursales de una empresa
+        /// </summary>
+        /// <returns>SucursalEmpresa</returns>
+        /// Autor:          aalamo
+        /// Fecha Creación: 20-04-2019
+        [HttpPost]
+        [Route("consultarSucursalEmpresas")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult ConsultarSucursalEmpresa([FromBody] ObjetoGenericoDto usuario)
+        {
+            try
+            {
+                empresasNegocio = new EmpresasNegocio();
+                List<SucursalEmpresaDto> res = empresasNegocio.ConsultarSucursal(usuario);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+
+        }
+
+        /// <summary>
         /// Método que consulta la lista de los tipos de sucursales
         /// </summary>
         /// <returns>Lista de sucursales</returns>
@@ -219,6 +248,35 @@ namespace SistemaPOS.Servicios.Controllers
             {
                 return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
             }
+        }
+
+        /// <summary>
+        /// metodo que permite eliminar una sucursal
+        /// </summary>
+        /// <returns>Empresas</returns>
+        /// Autor:          aalmao
+        /// Fecha Creación: 20-04-2019
+        [HttpPost]
+        [Route("eliminarSucursalEmpresa")]
+        [ResponseType(typeof(Mensaje))]
+        public IHttpActionResult EliminarSucursalEmpresa([FromBody] SucursalEmpresaDto Sucursalempresa)
+        {
+            try
+            {
+                empresasNegocio = new EmpresasNegocio();
+                string res = empresasNegocio.CreaModificaSucursalEmpresa("D", Sucursalempresa);
+
+                return Content(HttpStatusCode.OK, new Mensaje() { codigoRespuesta = Catalogo.OK, mensajeRespuesta = "", objetoRespuesta = res });
+            }
+            catch (ExcepcionOperacion exOp)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + exOp.Message });
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, new Mensaje() { codigoRespuesta = Catalogo.ERROR, mensajeRespuesta = Catalogo.FALLO_CONSULTA_MENU + ex.Message });
+            }
+
         }
 
         /// <summary>
