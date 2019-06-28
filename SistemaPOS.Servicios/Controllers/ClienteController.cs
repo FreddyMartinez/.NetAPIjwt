@@ -171,7 +171,7 @@ namespace SistemaPOS.Servicios.Controllers
         /// Autor:          aalamo
         /// Fecha Creación: 12-04-2019
         [HttpPost]
-        [Route("consultarClienteReferido")]
+        [Route("consultarClienteReferidor")]
         [ResponseType(typeof(Mensaje))]
         public IHttpActionResult ConsultarClienteReferido()
         {

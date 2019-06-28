@@ -80,7 +80,7 @@ namespace ProyectoPOS.BLL
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                DataTable tblEmpresaCliente = uow.ClienteRepositorio.ConsultarClienteReferido();
+                DataTable tblEmpresaCliente = uow.ClienteRepositorio.ConsultarClienteReferidor();
                 return MapeaObjetoGenerico(tblEmpresaCliente);
             }
         }

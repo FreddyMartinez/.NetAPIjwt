@@ -99,9 +99,9 @@ namespace SistemaPOS.DAL.Repositorio
             return EjecutaSentencia(Constantes.TAG_CLIENTE_PRINCIPAL, "dbo", "");
         }
 
-        public DataTable ConsultarClienteReferido()
+        public DataTable ConsultarClienteReferidor()
         {
-            return EjecutaSentencia(Constantes.TAG_CLIENTE_REFERIDO, "dbo", "");
+            return EjecutaSentencia(Constantes.TAG_CLIENTE_REFERIDOR, "dbo", "");
         }
         #endregion
     }

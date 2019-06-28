@@ -19,7 +19,7 @@ namespace SistemaPOS.DAL
         public const string TAG_TIPO_SUCURSAL = "LKPTIPSUC";
         public const string TAG_EMPRESA_CLIENTE = "LKPEMPCTE ";
         public const string TAG_CLIENTE_PRINCIPAL = "LKPCTEPPAL";
-        public const string TAG_CLIENTE_REFERIDO = "LKPCTEREF";
+        public const string TAG_CLIENTE_REFERIDOR = "LKPCTEREF";
 
         #endregion
     }
